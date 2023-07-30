@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bit Rebels Library</title>
+        <!-- Swiper css link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <!-- Font Awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- custom css link -->
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    </head>
+<body id="cart">
+
+    <header>
+        <nav class="nav-wrapper">
+          <div class="list">
+            <div class="left">
+                <img src="./asset/logo.png">
+                <div class="name"><b>Library</b></div>
+            </div>
+            <div class="middle">
+                <ul>
+                    <li><b><a href="index.html" >Home</a></b></li>
+                    <li><b><a href="book.html" >Books</a></b></li>
+                    <li><b><a href="order.html">Order</a></b></li>
+                    <li><b><a href="cart.html" class="active">Cart</a></b></li>
+                    <li><b><a href="profile.html">Profile</a></b></li>
+                </ul>
+            </div>
+            <div class="right">
+                <input type="text" name="text" class="input" placeholder="Search">
+            </div>
+          </div>
+        </nav>
+      </header>
+
+    <div class="wrapper">
+        <h3>Your Cart</h3>
+        <div class="project">
+            <div class="shop">
+                <div class="box" id="first">
+                    <img src="./asset/book3.png" alt="">
+                    <div class="content">
+                        <h3>Alone a True Story</h3>
+                        <h4 class="price">Price: $135.00</h4>
+                        <p class="unit">Quantity: <input value="1"></p>
+                        <p class="btn-area">
+                            <i class="fa fa-trash"></i>
+                            <span class="btn2" onclick="myFunction1()">Remove</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="box" id="second">
+                    <img src="./asset/History/b1.jpeg" alt="">
+                    <div class="content">
+                        <h3>The Guns of August</h3>
+                        <h4 class="price">Price: $105.00</h4>
+                        <p class="unit">Quantity: <input value="1"></p>
+                        <p class="btn-area">
+                            <i class="fa fa-trash"></i>
+                            <span class="btn2" onclick="myFunction()">Remove</span>
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="right-bar">
+                <p><span>Subtotal</span> <span class="total">$240</span></p>
+                <hr>
+                <p><span>Tax</span> <span class="total">$39</span></p>
+                <hr>
+                <p><span>Shipping</span> <span class="total">$20</span></p>
+                <hr>
+                <p><span>Total</span> <span class="total">$299</span></p>
+                <hr>
+                <a href="transaction.html"><i class="fa fa-shopping-cart"></i>Checkout</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("second");
+          var y= document.getElementsByClassName("total")[0];
+          var z= document.getElementsByClassName("total")[1];
+          var w= document.getElementsByClassName("total")[2];
+          var a= document.getElementsByClassName("total")[3];
+            x.style.display = "none";
+            y.innerHTML="$135.00";
+            z.innerHTML="$20.00";
+            w.innerHTML="$20.00";
+            a.innerHTML="$175.00";
+          }
+          function myFunction1() {
+          var x = document.getElementById("first");
+            x.style.display = "none";
+          }
+        
+        </script>
+    </body>
+</html>
